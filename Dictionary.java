@@ -1,11 +1,27 @@
 import java.util.ArrayList;
 
 public class Dictionary {
-  private ArrayList<Word> wordList = new ArrayList<>() ;
-  public void addWord(Word word) {
-    wordList.add(word);
+
+  public ArrayList<Word> words;
+
+  /**
+   * khoitao.
+   */
+  public Dictionary() {
+    words = new ArrayList<Word>();
   }
-  public ArrayList<Word> getWordList() {
-    return wordList;
+
+  /**
+   * addword.
+   */
+  public void addNewords(Word word) {
+    words.add(word);
+  }
+
+  /**
+   * getter.
+   */
+  public ArrayList<Word> getWords() {
+    return words;
   }
 }
