@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.Tooltip;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -16,24 +15,20 @@ public class HomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        searchWordBt.setOnAction(actionEvent -> {
+        searchWordBton.setOnAction(actionEvent -> {
             loadComponent("/view/SearchWordGui.fxml");
         });
-        addWordBt.setOnAction(actionEvent -> {
+        addWordBton.setOnAction(actionEvent -> {
             loadComponent("/view/AddWordGui.fxml");
         });
 
-        translateBt.setOnAction(actionEvent -> {
+        translateBton.setOnAction(actionEvent -> {
             loadComponent("/view/TranslateGui.fxml");
         });
 
-        // đưa ra tác dụng của nghe sửa xoá
-        tip1.setShowDelay(javafx.util.Duration.millis(500));
-        tip2.setShowDelay(javafx.util.Duration.millis(500));
-        tip3.setShowDelay(javafx.util.Duration.millis(500));
         loadComponent("/view/SearchWordGui.fxml");
 
-        closeBt.setOnMouseClicked(event -> System.exit(0));
+        closeBton.setOnMouseClicked(event -> System.exit(0));
     }
 
     private void replaceContainerContent(Node newContent) {
@@ -47,10 +42,7 @@ public class HomeController implements Initializable {
 
 
     @FXML
-    private Tooltip tip1, tip2, tip3;
-
-    @FXML
-    private Button addWordBt, translateBt, searchWordBt, closeBt;
+    private Button addWordBton, translateBton, searchWordBton, closeBton;
 
     @FXML
     private AnchorPane container;
