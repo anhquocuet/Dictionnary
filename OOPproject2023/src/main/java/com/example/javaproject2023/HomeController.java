@@ -29,6 +29,10 @@ public class HomeController implements Initializable {
         loadComponent("/view/SearchWordGui.fxml");
 
         closeBton.setOnMouseClicked(event -> System.exit(0));
+
+        gameBton.setOnAction(actionEvent -> {
+            loadComponent("/view/GameGui.fxml");
+        });
     }
 
     private void replaceContainerContent(Node newContent) {
@@ -42,7 +46,7 @@ public class HomeController implements Initializable {
 
 
     @FXML
-    private Button addWordBton, translateBton, searchWordBton, closeBton;
+    private Button addWordBton, translateBton, searchWordBton, closeBton, gameBton;
 
     @FXML
     private AnchorPane container;

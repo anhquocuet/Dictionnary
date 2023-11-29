@@ -18,10 +18,7 @@ import java.net.URL;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-
-
 import java.util.ResourceBundle;
-
 
 public class SearchWordController implements Initializable {
     private DictionaryManagement dM = new DictionaryManagement();
@@ -105,7 +102,6 @@ public class SearchWordController implements Initializable {
         explain_word.setText("");
         explain_word.setEditable(false);
         english_word.setText("abbbbbbbbbbbbbbbbbbb");
-
     }
     @FXML
     private void handleClickSaveButton() {

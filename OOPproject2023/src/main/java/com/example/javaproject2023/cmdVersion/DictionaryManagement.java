@@ -2,6 +2,7 @@ package com.example.javaproject2023.cmdVersion;
 
 import java.io.*;
 import java.util.Comparator;
+import java.util.Scanner;
 
 import static java.util.Collections.binarySearch;
 
@@ -76,6 +77,27 @@ public class DictionaryManagement extends Dictionary {
             x = -(x + 1);
             words.add(x, word);
             sortWordList(words);
+            System.out.println("Thêm thành công");
         } else System.out.println("Từ vựng đã tồn tại!!\nHãy chọn chức năng sửa đổi...\n");
+    }
+    public void dictionaryImportFromFile(Dictionary dictionary, String path) {
+        try {
+            File infile = new File(path);
+            Scanner sc = new Scanner(infile);
+            while (sc.hasNextLine()) {
+                String lineText = sc.nextLine();
+                String[] x = lineText.split("\t");
+                if (x.length == 2) {
+                    String wordTarget = x[0];
+                    String wordExplain = x[1];
+                    Word word = new Word(wordTarget, wordExplain);
+                    dictionary.getWords().add(word);
+                }
+            }
+            sc.close();
+            System.out.println("Đã nhập danh sách từ vựng từ tệp thành công...");
+        } catch (FileNotFoundException a) {
+            System.out.println("Không tìm thấy file: " + a.getMessage());
+        }
     }
 }

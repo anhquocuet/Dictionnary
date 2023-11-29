@@ -1,10 +1,14 @@
 .root{
-     -fx-background-color: linear-gradient(to top right,#752e65, #44008b);
-     -fx-background-radius: 5;
+     -fx-background-color: #8350c7;
      -fx-border-radius: 5;
+     -fx-background-radius: 5;
+
+}
+#containerAnchor{
+    -fx-background-color: #e8d4b5;
 }
 .container{
-    -fx-background-color:  #fff;
+    -fx-background-color:  #e8d4b5;
     -fx-background-radius: 5;
     -fx-border-radius: 5;
 }
@@ -14,11 +18,12 @@
 .menu-item{
  -fx-background-color: transparent;
  -fx-background-radius: 30;
+  -fx-text-fill: #fff;
+  -fx-font-weight: bold;
+  -fx-font-family: "Poppins";
  -fx-padding: 0 0 0 10;
  -fx-background-insets: 0;
- -fx-text-fill: #fff;
- -fx-font-weight: bold;
- -fx-font-family: "Poppins";
+
 }
 .menu-item:hover,
 .menu-item:focused{
@@ -37,9 +42,7 @@
   -fx-font-size: 13;
   -fx-border: none ;
 }
-.search-field:pressed > .search-box{
-   -fx-background-color: white;
-}
+
 .cancel-button{
     -fx-background-color: transparent;
     -fx-text-fill: #2b2b2b;
@@ -172,15 +175,6 @@
     -fx-background-radius: 5;
     -fx-border-radius: 5;
 }
-.add-button{
-    -fx-text-fill: #ecf0f1;
-    -fx-background-radius: 5px;
-    -fx-font-size: 13px;
-    -fx-font-weight: 700;
-    -fx-background-color: linear-gradient(to bottom left, #44008b, #9f45b0);
-    -fx-pref-width: 100px;
-    -fx-pref-height: 30px;
-}
 .trans-button{
     -fx-text-fill: #ecf0f1;
     -fx-background-radius: 5px;
@@ -190,6 +184,16 @@
     -fx-pref-width: 100px;
     -fx-pref-height: 25px;
 }
+.add-button{
+    -fx-text-fill: #ecf0f1;
+    -fx-background-radius: 5px;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-background-color: linear-gradient(to bottom left, #44008b, #9f45b0);
+    -fx-pref-width: 100px;
+    -fx-pref-height: 30px;
+}
+
 .add-button:pressed, .trans-button:pressed{
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
@@ -214,15 +218,6 @@
     -fx-background-radius: 0 0 7 0;
     -fx-border-radius: 0 0 7 0;
 }
-.switch-button{
-    -fx-background-color: transparent;
-}
-.switch-button:pressed{
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
-    -fx-background-color: #dfe6e9;
-}
-
 .exit-button{
      -fx-background-color: transparent;
      -fx-background-radius: 30;
@@ -233,4 +228,39 @@
 }
 .exit-button:hover{
      -fx-background-color: #b22a00;
+}
+.switch-button{
+    -fx-background-color: transparent;
+}
+.switch-button:pressed{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-background-color: #dfe6e9;
+}
+.game-answer{
+-fx-text-fill: #ecf0f1;
+    -fx-background-radius: 5px;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-background-color: linear-gradient(to right, #FF4D58, #FF8F40);
+    -fx-pref-width: 143px;
+    -fx-pref-height: 54px;
+}
+.reset{
+    -fx-text-fill: #ecf0f1;
+        -fx-background-radius: 111px;
+        -fx-font-size: 13px;
+        -fx-font-weight: 700;
+        -fx-background-color: #c9baba;
+        -fx-pref-width: 45px;
+        -fx-pref-height: 45px;
+}
+.question{
+    -fx-text-fill: #9f45b0;
+    -fx-border-color: #966FBD;
+    -fx-font-size: 30px;
+    -fx-border-width: 1.5;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-color: white;
 }

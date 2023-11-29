@@ -35,13 +35,6 @@
                             <font>
                                 <Font name="System Bold Italic" size="18.0" />
                             </font>
-                            <graphic>
-                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../Icons/icons8_add_64px.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
                         </Label>
                     </children>
                 </Pane>
